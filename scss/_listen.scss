@@ -1,0 +1,57 @@
+#listen {
+
+    main {
+
+        @include flex-colum-center;
+
+        .listen__titulo {
+
+            h1{
+                color: $rojo;
+                padding-bottom: 2em;
+            }
+        }
+
+
+        .listen__grilla{
+            width: 100%;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+
+            .video{
+
+                @include flex-colum-center;
+                
+                div{
+                    h2{
+                        font-size: medium;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    footer{
+
+        .redesylegal{
+
+            @include flex-row-center;
+
+            .redes{
+
+                @include flex-row-center;
+            }
+
+            .legal{
+
+                @include flex-row-center
+                 
+            }
+
+        }
+    }
+}

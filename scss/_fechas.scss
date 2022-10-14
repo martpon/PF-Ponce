@@ -1,0 +1,67 @@
+#fechas{
+
+    main{
+
+        #livedates{
+
+            @include flex-colum-center;
+
+           
+            .fechas__titulo{
+
+                font-size: 2em;
+                padding: 2em;
+            }
+
+            .fechas__tabla{
+
+                div{
+
+                    @include flex-row-center;
+                }
+
+            }
+        }
+
+        #pastdates{
+
+            @include flex-colum-center;
+
+           
+            .fechas__titulo{
+
+                font-size: 2em;
+                padding: 2em;
+            }
+
+            .fechas__tabla{
+
+                div{
+
+                    @include flex-row-center;
+                }
+
+            }
+        }
+    }
+
+    footer{
+
+        .redesylegal{
+
+            @include flex-row-center;
+
+            .redes{
+
+                @include flex-row-center;
+            }
+
+            .legal{
+
+                @include flex-row-center
+                 
+            }
+
+        }
+    }
+}

@@ -1,0 +1,48 @@
+#media{
+
+    main{
+
+        @include flex-colum-center;
+
+        .media__titulo{
+            font-size: 2em;
+        }
+
+        .media__articulos{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+            padding-right: 20%;
+            padding-left: 20%;
+
+            div{
+                padding: 20px;
+            }
+        }
+
+
+    }
+
+    footer{
+
+        .redesylegal{
+
+            @include flex-row-center;
+
+            .redes{
+
+                @include flex-row-center;
+            }
+
+            .legal{
+
+                @include flex-row-center
+                 
+            }
+
+        }
+
+    }
+
+}

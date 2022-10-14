@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .nav_container nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .nav_container nav ul div {
+  padding: 3em;
+}
+
+/*paleta de colores*/
+/*paleta de colores*/
+#index main .index__compra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#index main .index__compra div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#index main .index__compra div .index__compra--titulos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#index main .index__fechas {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#index main .index__fechas .index__fechas--tabla {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#index main .index__fechas .index__fechas--tabla div {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+}
+#index main .index__videos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#index main .index__videos .index__video--titulo {
+  padding: 2em;
+}
+#index main .index__videos .index__video--videos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#index footer .index__formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#index footer .index__formulario .index__formulario--titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#index footer .index__formulario .index__formulario--subtitulo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#index footer .redesylegal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#index footer .redesylegal .redes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#index footer .redesylegal .legal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#listen main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#listen main .listen__titulo h1 {
+  color: red;
+  padding-bottom: 2em;
+}
+#listen main .listen__grilla {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+#listen main .listen__grilla .video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#listen main .listen__grilla .video div h2 {
+  font-size: medium;
+}
+#listen footer .redesylegal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#listen footer .redesylegal .redes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#listen footer .redesylegal .legal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#fechas main #livedates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#fechas main #livedates .fechas__titulo {
+  font-size: 2em;
+  padding: 2em;
+}
+#fechas main #livedates .fechas__tabla div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#fechas main #pastdates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#fechas main #pastdates .fechas__titulo {
+  font-size: 2em;
+  padding: 2em;
+}
+#fechas main #pastdates .fechas__tabla div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#fechas footer .redesylegal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#fechas footer .redesylegal .redes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#fechas footer .redesylegal .legal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#media main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#media main .media__titulo {
+  font-size: 2em;
+}
+#media main .media__articulos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 20%;
+  padding-left: 20%;
+}
+#media main .media__articulos div {
+  padding: 20px;
+}
+#media footer .redesylegal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#media footer .redesylegal .redes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#media footer .redesylegal .legal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
