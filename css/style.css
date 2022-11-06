@@ -8,39 +8,243 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Times New Roman", Times, serif;
 }
 
-header .nav_container nav ul {
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 20;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  left: 0;
+  transition: top 0.5s ease;
+  transition-property: top;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+header .nav_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 165px;
+}
+header .nav_container nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+header .nav_container nav .nav1 {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-header .nav_container nav ul div {
-  padding: 3em;
+header .nav_container nav .nav1 a {
+  padding-left: 2em;
+  padding-right: 2em;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+header .nav_container nav .nav1 a img {
+  width: 246.57px;
+  height: 163px;
+}
+header .nav_container nav .nav1 a:hover {
+  color: red;
 }
 
+@media (max-width: 900px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+  }
+  header .nav_container {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header .nav_container nav {
+    align-items: center;
+    display: grid;
+    grid-template-areas: "b" "a" "c";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+  }
+  header .nav_container nav .a {
+    grid-area: a;
+  }
+  header .nav_container nav .b {
+    grid-area: b;
+  }
+  header .nav_container nav .c {
+    grid-area: c;
+  }
+  header .nav_container nav a img {
+    width: 50%;
+    height: 50%;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 /*paleta de colores*/
 /*paleta de colores*/
+#index {
+  font-family: "calibri";
+}
+#index main {
+  /*seccion compra*/
+  /*seccion media*/
+  /*seccion fechas*/
+  /*seccion videos*/
+}
 #index main .index__compra {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 20px;
 }
 #index main .index__compra div {
   display: flex;
   flex-direction: row;
   align-items: center;
+  background-color: rgb(238, 50, 78);
 }
 #index main .index__compra div .index__compra--titulos {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+#index main .index__compra div .index__compra--titulos h1 {
+  color: black;
+  font-size: 4em;
+}
+#index main .index__compra div .index__compra--titulos h2 {
+  color: black;
+  font-size: 2em;
+}
+#index main .index__compra div .index__compra--titulos h3 {
+  color: black;
+  font-size: 4em;
+  padding: 0.5em;
+}
+#index main .index__compra div .index__compra--titulos h4 {
+  padding-top: 2em;
+}
+#index main .index__compra div .index__compra--titulos h4 a {
+  border: 2px solid black;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+  border-color: rgb(35, 34, 35);
+  padding: 0.5em;
+}
+#index main .index__compra div .index__compra--titulos h4 a:hover {
+  background-color: black;
+  color: rgb(238, 50, 78);
+}
+#index main .index__compra div .index__compra--img img {
+  width: 500px;
+  height: 450px;
+}
+#index main .index__media {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#index main .index__media .index__media--titulo {
+  background-color: rgb(238, 50, 78);
+  width: 100%;
+  height: 100%;
+}
+#index main .index__media .index__media--titulo h5 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 3em;
+  text-align: center;
+  font-size: 3em;
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+#index main .index__media .index__media--contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 20%;
+  padding-left: 20%;
+}
+#index main .index__media .index__media--contenido div {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#index main .index__media .index__media--contenido div h2 {
+  padding-bottom: 0.2em;
+  margin-bottom: 0.5em;
+  font-size: 2.5em;
+  border-bottom: 2px solid black;
+  color: rgb(238, 50, 78);
+}
+#index main .index__media .index__media--contenido div p {
+  font-size: 2em;
+}
+#index main .index__media .index__media--contenido div a {
+  text-decoration: none;
+}
+#index main .index__media .index__media--contenido div a:hover {
+  color: rgb(238, 50, 78);
+}
+#index main .index__media .index__media--subtitulo {
+  padding: 2.5em;
+}
+#index main .index__media .index__media--subtitulo a {
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 0.7em;
+  font-size: 2em;
+  text-decoration: none;
+  color: black;
+}
+#index main .index__media .index__media--subtitulo a:hover {
+  background-color: black;
+  color: rgb(238, 50, 78);
+}
 #index main .index__fechas {
   padding: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+#index main .index__fechas .index__fechas--titulo {
+  background-color: rgb(238, 50, 78);
+  width: 100%;
+  height: 100%;
+}
+#index main .index__fechas .index__fechas--titulo h5 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 3em;
+  text-align: center;
+  font-size: 3em;
+  padding-top: 2em;
+  padding-bottom: 1em;
 }
 #index main .index__fechas .index__fechas--tabla {
   padding: 2em;
@@ -49,144 +253,452 @@ header .nav_container nav ul div {
   align-items: center;
 }
 #index main .index__fechas .index__fechas--tabla div {
-  padding: 1em;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  padding: 1em;
+}
+#index main .index__fechas .index__fechas--tabla div div p {
+  padding: 0.5em 1.5em 0.7em 1.5em;
+  font-size: 1.5em;
+  border-bottom: 2px solid black;
+}
+#index main .index__fechas .index__fechas--tabla div a {
+  border: 2px solid black;
+  border-radius: 4px;
+  font-size: 1.3em;
+  padding: 0.5em 0.7em 0.5em 0.7em;
+  text-decoration: none;
+  color: black;
+}
+#index main .index__fechas .index__fechas--tabla div a:hover {
+  background-color: black;
+  color: rgb(238, 50, 78);
+}
+#index main .index__fechas .index__fechas--subtitulo a {
+  font-size: 2em;
+  padding: 0.7em;
+  width: 3em;
+  height: 2em;
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+#index main .index__fechas .index__fechas--subtitulo a:hover {
+  background-color: black;
+  color: rgb(238, 50, 78);
 }
 #index main .index__videos {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#index main .index__videos .index__video--titulo {
+#index main .index__videos .index__videos--titulo {
+  background-color: rgb(238, 50, 78);
+  width: 100%;
   padding: 2em;
-}
-#index main .index__videos .index__video--videos {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-#index footer .index__formulario {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#index footer .index__formulario .index__formulario--titulo {
+#index main .index__videos .index__videos--titulo p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 3em;
+}
+#index main .index__videos .index__videos--videos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#index main .index__videos .index__videos--videos div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+#index main .index__videos .index__videos--videos div p {
+  font-size: 2em;
+}
+#index main .index__videos .index__videos--subtitulo {
+  padding: 2.5em;
+}
+#index main .index__videos .index__videos--subtitulo a {
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 0.7em;
+  font-size: 2em;
+  text-decoration: none;
+  color: black;
+}
+#index main .index__videos .index__videos--subtitulo a:hover {
+  background-color: black;
+  color: rgb(238, 50, 78);
+}
+#index main form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#index footer .index__formulario .index__formulario--subtitulo {
+#index main form .index__formulario--titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  background-color: rgb(238, 50, 78);
+  width: 100%;
+}
+#index main form .index__formulario--titulo h6 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 3em;
+}
+#index main form .botons {
+  width: 100%;
+  border: none;
+  padding: 12px;
+  margin: 35px 0;
+  font-size: 16px;
+}
+#index main h4 {
+  font-size: 2em;
+  padding-top: 1.5em;
+}
+#index main .password--button {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+#index main .password--button input {
+  width: 300px;
+}
+#index main .password--button button {
+  padding-left: 1em;
+}
+#index footer {
+  width: 100%;
 }
 #index footer .redesylegal {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  z-index: 20;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  left: 0;
+  padding-top: 2em;
 }
 #index footer .redesylegal .redes {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: space-between;
+  width: 75px;
+  padding-bottom: 0.5em;
+}
+#index footer .redesylegal .redes a img {
+  width: 30px;
+  height: 30px;
 }
 #index footer .redesylegal .legal {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  width: 200px;
 }
 
+@media (max-width: 900px) {
+  #index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #index main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #index main .index__compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #index main .index__compra .index__compra--titulos {
+    padding-bottom: 1.7em;
+  }
+  #index main .index__compra div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #index main .index__fechas .index__fechas--tabla div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #index main .index__videos .index__videos--videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #index main .index__videos .index__videos--videos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #index main form .index__formulario--titulo h6 {
+    font-size: 1.5em;
+  }
+  #index main form div p {
+    margin: 70px;
+  }
+}
+@media (max-width: 500px) {
+  #index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #index main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #index main .index__compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #index main .index__compra div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #index main .index__fechas .index__fechas--titulo h5 {
+    font-size: 2em;
+  }
+  #index main .index__fechas .index__fechas--tabla div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #index main .index__videos .index__videos--videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #index main .index__videos .index__videos--videos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #index main form div p {
+    margin: 70px;
+  }
+}
+#listen {
+  font-family: "calibri";
+}
 #listen main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#listen main .listen__titulo h1 {
-  color: red;
-  padding-bottom: 2em;
+#listen main h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 3em;
+  border-bottom: 8px solid black;
+  padding: 1.5em 0.5em 0.5em 0.5em;
+  margin-bottom: 1em;
 }
 #listen main .listen__grilla {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+  margin: 10px;
 }
 #listen main .listen__grilla .video {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#listen main .listen__grilla .video div h2 {
-  font-size: medium;
+#listen main .listen__grilla .video h2 {
+  font-family: "calibri";
+  font-size: 1.1em;
+  padding-bottom: 0.5em;
+  margin: 0.5em 1.5em 2em 1.5em;
+  border-bottom: 2px solid black;
+  height: 50px;
+}
+#listen main .listen__grilla .video div {
+  margin: 0.5em;
+  padding-right: 20px;
+  padding-bottom: 15px;
+}
+#listen footer {
+  width: 100%;
 }
 #listen footer .redesylegal {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  z-index: 20;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  left: 0;
+  padding-top: 2em;
 }
 #listen footer .redesylegal .redes {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: space-between;
+  width: 75px;
+  padding-bottom: 0.5em;
+}
+#listen footer .redesylegal .redes a img {
+  width: 30px;
+  height: 30px;
 }
 #listen footer .redesylegal .legal {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  width: 200px;
 }
 
-#fechas main #livedates {
+@media (max-width: 950px) {
+  #listen main .listen__grilla {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media (max-width: 700px) {
+  #listen main .listen__grilla {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#fechas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "calibri";
+}
+#fechas main .main__container .fechas__titulo {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#fechas main #livedates .fechas__titulo {
-  font-size: 2em;
+#fechas main .main__container .fechas__titulo h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 3em;
+  border-bottom: 8px solid black;
+  padding: 1.5em 0.5em 0.5em 0.5em;
+  margin-bottom: 1em;
+}
+#fechas main .main__container .fechas__tabla {
   padding: 2em;
-}
-#fechas main #livedates .fechas__tabla div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-#fechas main #pastdates {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#fechas main #pastdates .fechas__titulo {
-  font-size: 2em;
-  padding: 2em;
-}
-#fechas main #pastdates .fechas__tabla div {
+#fechas main .main__container .fechas__tabla div {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 1em;
+}
+#fechas main .main__container .fechas__tabla div div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#fechas main .main__container .fechas__tabla div div p {
+  padding: 0.5em 1.5em 0.7em 1.5em;
+  font-size: 1.5em;
+  border-bottom: 2px solid black;
+}
+#fechas main .main__container .fechas__tabla div a {
+  border: 2px solid black;
+  border-radius: 4px;
+  font-size: 1.3em;
+  padding: 0.5em 0.7em 0.5em 0.7em;
+  text-decoration: none;
+  color: black;
+}
+#fechas main .main__container .fechas__tabla div a:hover {
+  background-color: black;
+  color: rgb(238, 50, 78);
+}
+#fechas footer {
+  width: 100%;
 }
 #fechas footer .redesylegal {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  z-index: 20;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  left: 0;
+  padding-top: 2em;
 }
 #fechas footer .redesylegal .redes {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: space-between;
+  width: 75px;
+  padding-bottom: 0.5em;
+}
+#fechas footer .redesylegal .redes a img {
+  width: 30px;
+  height: 30px;
 }
 #fechas footer .redesylegal .legal {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  width: 200px;
 }
 
+@media (max-width: 900px) {
+  #fechas main .main__container .fechas__tabla div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #fechas main .main__container .fechas__tabla div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#media {
+  font-family: "calibri";
+}
 #media main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#media main .media__titulo {
-  font-size: 2em;
+#media main h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 3em;
+  border-bottom: 8px solid black;
+  padding: 1.5em 0.5em 0.5em 0.5em;
+  margin-bottom: 1em;
 }
 #media main .media__articulos {
   display: flex;
@@ -197,19 +709,190 @@ header .nav_container nav ul div {
 }
 #media main .media__articulos div {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#media main .media__articulos div h2 {
+  padding-bottom: 0.2em;
+  margin-bottom: 0.5em;
+  font-size: 2em;
+  border-bottom: 2px solid black;
+  color: rgb(238, 50, 78);
+}
+#media main .media__articulos div p {
+  font-size: 1.5em;
+}
+#media main .media__articulos div a {
+  text-decoration: none;
+}
+#media main .media__articulos div a:hover {
+  color: rgb(238, 50, 78);
+}
+#media footer {
+  width: 100%;
 }
 #media footer .redesylegal {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  z-index: 20;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  left: 0;
+  padding-top: 2em;
 }
 #media footer .redesylegal .redes {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: space-between;
+  width: 75px;
+  padding-bottom: 0.5em;
+}
+#media footer .redesylegal .redes a img {
+  width: 30px;
+  height: 30px;
 }
 #media footer .redesylegal .legal {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  width: 200px;
+}
+
+#buynow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "calibri";
+}
+#buynow main {
+  display: flex;
+  flex-direction: row;
+}
+#buynow main .buynow__imagen {
+  margin: 20px;
+  padding-top: 2em;
+}
+#buynow main .buynow__imagen img {
+  width: 500px;
+  height: 450px;
+}
+#buynow main .buynow__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding-left: 25px;
+  height: auto;
+}
+#buynow main .buynow__info .seccion1 {
+  align-items: flex-start;
+}
+#buynow main .buynow__info .seccion1 h1 {
+  font-size: 2em;
+  color: rgb(238, 50, 78);
+}
+#buynow main .buynow__info .seccion1 h2 {
+  padding-left: 15px;
+  font-size: 2em;
+}
+#buynow main .buynow__info .seccion1 p {
+  font-size: 1.5em;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+#buynow main .buynow__info form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5em;
+}
+#buynow main .buynow__info form div {
+  padding: 10px;
+}
+#buynow main .buynow__info h3 {
+  font-size: 1.5em;
+  padding-top: 0.5em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+}
+#buynow main .buynow__info .seccion4 ol li {
+  padding-bottom: 10px;
+}
+#buynow footer {
+  width: 100%;
+}
+#buynow footer .redesylegal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 20;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  left: 0;
+  padding-top: 2em;
+}
+#buynow footer .redesylegal .redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75px;
+  padding-bottom: 0.5em;
+}
+#buynow footer .redesylegal .redes a img {
+  width: 30px;
+  height: 30px;
+}
+#buynow footer .redesylegal .legal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+}
+
+@media (max-width: 900px) {
+  #buynow main {
+    display: flex;
+    flex-direction: column;
+  }
+  #buynow main .buynow__imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #buynow main .buynow__info {
+    padding-left: 25px;
+  }
+  #buynow main .buynow__info p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 750px) {
+  #buynow main {
+    display: flex;
+    flex-direction: column;
+  }
+  #buynow main .buynow__imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #buynow main .buynow__imagen img {
+    width: 300px;
+    height: 250px;
+  }
+  #buynow main .buynow__info p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=style.css.map */

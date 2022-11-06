@@ -1,100 +1,461 @@
-#index{
+#index {
 
-    main{
+    font-family: 'calibri';
 
-        .index__compra{
+    main {
+
+        /*seccion compra*/
+
+        .index__compra {
             @include flex-colum-center;
+            margin: 20px;
 
-            div{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-            .index__compra--titulos{
-               
-               @include flex-colum-center;
-            }
+            div {
+                @include flex-row-center;
+                background-color: $rojo;
+
+
+                .index__compra--titulos {
+
+                    @include flex-colum-center;
+
+
+                    h1 {
+                        color: black;
+                        font-size: 4em;
+
+
+                    }
+
+                    h2 {
+                        color: black;
+                        font-size: 2em;
+                    }
+
+                    h3 {
+                        color: black;
+                        font-size: 4em;
+                        padding: 0.5em;
+                    }
+
+                    h4 {
+                        padding-top: 2em;
+
+                        a {
+                            @include radio;
+                            text-decoration: none;
+                            color: black;
+                            font-size: 2em;
+                            border-color: $negro;
+                            padding: 0.5em;
+
+                            &:hover {
+                                background-color: black;
+                                color: $rojo;
+                            }
+                        }
+                    }
+                }
+
+                .index__compra--img {
+
+                    img {
+                        width: 500px;
+                        height: 450px;
+                    }
+
+                }
             }
         }
 
-        .index__fechas{
+        /*seccion media*/
+        .index__media {
 
-            padding: 2em;
+
+            padding: $padding-secciones;
             @include flex-colum-center;
 
-            .index__fechas--tabla{
-                padding: 2em;
+            .index__media--titulo {
+
+                background-color: $rojo;
+                width: 100%;
+                height: 100%;
+
+
+                h5 {
+                    @include estilo-titulos;
+                    text-align: center;
+                    font-size: 3em;
+                    padding-top: 2em;
+                    padding-bottom: 1em;
+                }
+            }
+
+            .index__media--contenido {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                padding-right: 20%;
+                padding-left: 20%;
+
+                div {
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    h2 {
+                        padding-bottom: 0.2em;
+                        margin-bottom: 0.5em;
+                        font-size: 2.5em;
+                        border-bottom: 2px solid black;
+                        color: $rojo;
+                    }
+
+                    p {
+                        font-size: 2em;
+                    }
+
+                    a {
+
+                        text-decoration: none;
+
+                        &:hover {
+                            color: $rojo;
+                        }
+                    }
+
+                }
+            }
+
+            .index__media--subtitulo{
+
+                padding: 2.5em;
+
+                a {
+                    @include hovers;
+                    @include radio;
+                    padding: 0.7em;
+                    font-size: 2em;
+                    text-decoration: none;
+                    color: black;
+                }
+
+            }
+
+
+        }
+
+        /*seccion fechas*/
+
+        .index__fechas {
+
+            padding: $padding-secciones;
+            @include flex-colum-center;
+
+            .index__fechas--titulo {
+
+                background-color: $rojo;
+                width: 100%;
+                height: 100%;
+
+
+                h5 {
+                    @include estilo-titulos;
+                    text-align: center;
+                    font-size: 3em;
+                    padding-top: 2em;
+                    padding-bottom: 1em;
+                }
+            }
+
+            .index__fechas--tabla {
+                padding: $padding-secciones;
                 @include flex-colum-center;
 
-                div{
+                div {
+                    @include flex-row-center;
                     padding: 1em;
-                    display: flex;
-                    flex-direction: row;
+
+
+                    div {
+                        p {
+                            padding: 0.5em 1.5em 0.7em 1.5em;
+                            font-size: 1.5em;
+                            border-bottom: 2px solid black;
+                        }
+                    }
+
+                    a {
+
+                        @include radio;
+                        @include hovers;
+                        font-size: 1.3em;
+                        padding: 0.5em 0.7em 0.5em 0.7em;
+                        text-decoration: none;
+                        color: black;
+                    }
                 }
-                
+
+            }
+
+            .index__fechas--subtitulo {
+
+
+                a {
+                    font-size: 2em;
+                    padding: 0.7em;
+                    width: 3em;
+                    height: 2em;
+                    text-decoration: none;
+                    color: black;
+                    @include hovers;
+                    @include radio;
+
+                }
+
             }
         }
 
-        .index__videos{
+        /*seccion videos*/
+
+        .index__videos {
 
             @include flex-colum-center;
 
-            .index__video--titulo{
-                padding: 2em;
+            .index__videos--titulo {
+                background-color: $rojo;
+                width: 100%;
+                padding: $padding-secciones;
+                @include flex-colum-center;
+
+
+
+                p {
+                    @include estilo-titulos;
+                }
+
             }
 
-            .index__video--videos{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
+            .index__videos--videos {
+
+                @include flex-row-center;
+
+                div {
+                    @include flex-colum-center;
+                    padding: 1em;
+
+                    p {
+                        font-size: 2em;
+                    }
+
+
+                }
+            }
+
+            .index__videos--subtitulo {
+
+                padding: 2.5em;
+
+                a {
+                    @include hovers;
+                    @include radio;
+                    padding: 0.7em;
+                    font-size: 2em;
+                    text-decoration: none;
+                    color: black;
+                }
             }
         }
 
-        
 
 
 
+
+
+
+
+
+
+        form {
+
+            @include flex-colum-center;
+
+            .index__formulario--titulo {
+
+                @include flex-colum-center;
+                padding: $padding-secciones;
+                background-color: $rojo;
+                width: 100%;
+
+                h6 {
+                    @include estilo-titulos;
+                }
+
+            }
+
+            .botons {
+                width: 100%;
+
+                border: none;
+                padding: 12px;
+
+                margin: 35px 0;
+                font-size: 16px;
+            }
+        }
+
+        h4 {
+            font-size: 2em;
+            padding-top: 1.5em;
+        }
+
+        .password--button {
+            @include flex-row-center;
+
+            input {
+                width: 300px;
+            }
+
+            button {
+                padding-left: 1em;
+            }
+        }
     }
 
 
-    footer{
-        .index__formulario{
 
-            @include flex-colum-center;
+    footer {
 
-            .index__formulario--titulo{
-                
-                @include flex-colum-center;
-
-            }
-
-            .index__formulario--subtitulo{
-
-                @include flex-row-center;
-            }
-
-
-        }
-
-
-        .redesylegal{
-
-            @include flex-row-center;
-
-            .redes{
-
-                @include flex-row-center;
-            }
-
-            .legal{
-
-                @include flex-row-center
-                 
-            }
-
-        }
-        
+        @include footer;
 
     }
 }
 
+@media (max-width: 900px) {
 
+    #index {
+
+        @include flex-colum-center;
+
+        main {
+
+            @include flex-colum-center;
+
+            .index__compra {
+
+                @include flex-colum-center;
+
+                .index__compra--titulos{
+                    padding-bottom: 1.7em;
+                }
+
+                
+
+                div {
+                    @include flex-colum-center;
+                }
+            }
+
+            .index__fechas {
+                .index__fechas--tabla {
+                    div {
+                        @include flex-colum-center;
+                    }
+                }
+            }
+
+
+            .index__videos {
+                .index__videos--videos {
+                    @include flex-colum-center;
+
+                    div {
+                        @include flex-colum-center;
+                    }
+                }
+            }
+
+            form {
+                .index__formulario--titulo {
+                    h6 {
+                        font-size: 1.5em;
+
+                    }
+                }
+
+                div {
+                    p {
+                        margin: 70px;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+
+}
+
+@media (max-width: 500px) {
+
+    #index {
+
+        @include flex-colum-center;
+
+        main {
+
+            @include flex-colum-center;
+
+            .index__compra {
+
+                @include flex-colum-center;
+
+                div {
+                    @include flex-colum-center;
+                }
+            }
+
+            .index__fechas {
+
+                .index__fechas--titulo {
+
+                    h5 {
+                        font-size: 2em;
+                    }
+                }
+
+                .index__fechas--tabla {
+                    div {
+                        @include flex-colum-center;
+                    }
+                }
+            }
+
+
+            .index__videos {
+                .index__videos--videos {
+                    @include flex-colum-center;
+
+                    div {
+                        @include flex-colum-center;
+
+
+                    }
+                }
+            }
+
+            form {
+                div {
+                    p {
+                        margin: 70px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

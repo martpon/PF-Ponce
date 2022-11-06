@@ -1,57 +1,100 @@
 #listen {
 
+    font-family: 'calibri';
+
     main {
 
         @include flex-colum-center;
 
-        .listen__titulo {
+        
 
-            h1{
-                color: $rojo;
-                padding-bottom: 2em;
+            h1 {
+                @include estilo-titulos;
+                border-bottom: 8px solid black;
+                padding: 1.5em 0.5em 0.5em 0.5em;
+                margin-bottom: 1em;
             }
-        }
+        
 
 
-        .listen__grilla{
+        .listen__grilla {
             width: 100%;
 
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr 1fr;
+            margin: 10px;
 
-            .video{
+            .video {
 
                 @include flex-colum-center;
-                
-                div{
-                    h2{
-                        font-size: medium;
-                    }
+
+
+                h2 {
+                    font-family: 'calibri';
+                    font-size: 1.10em;
+                    padding-bottom: 0.5em;
+                    margin: 0.5em 1.5em 2em 1.5em;
+                    border-bottom: 2px solid black;
+                    height: 50px;
+                    
                 }
 
+                div {
+                    margin: 0.5em;
+                    padding-right: 20px;
+                    padding-bottom: 15px;
+                }
+
+
             }
         }
     }
 
 
-    footer{
+    
+    footer {
+        
+       
+        
+       @include footer
 
-        .redesylegal{
+    }
+}
 
-            @include flex-row-center;
 
-            .redes{
+@media (max-width:950px) {
 
-                @include flex-row-center;
-            }
+    #listen {
 
-            .legal{
+        main {
 
-                @include flex-row-center
-                 
+            .listen__grilla {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
             }
 
         }
+
     }
+
+}
+
+@media (max-width:700px) {
+
+    #listen {
+
+        main {
+
+            .listen__grilla {
+                width: 100%;
+                @include flex-colum-center;
+            }
+
+        }
+
+    }
+
 }

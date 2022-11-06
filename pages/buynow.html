@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
@@ -18,61 +21,158 @@
 
             <nav>
 
-                <ul>
 
-                    <div>
-                        <li><a href="./media.html">Media</a></li>
-                    </div>
-                    <div>
-                        <li><a href="./listen.html">Listen</a></li>
-                    </div>
-                    <div>
-                        <a href="../index.html"><img src="../img/titulopaginanav.png" alt=""></a>
-                    </div>
-                    <div>
-                        <li><a href="./fechas.html">Dates</a></li>
-                    </div>
-                    <div>
-                        <li><a href="./buynow.html">Buynow</a></li>
-                    </div>
 
-                </ul>
+                <div class="nav1 a">
+                    <a href="../pages/media.html">Media</a>
+
+                    <a href="../pages/listen.html">Listen</a>
+                </div>
+                <div class="nav1 b">
+                    <a href="../index.html"><img src="../img/titulopaginanav.ico" alt="logotipo de Ghostpell"></a>
+                </div>
+                <div class="nav1 c">
+                    <a href="../pages/fechas.html">Dates</a></li>
+
+                    <a href="../pages/buynow.html">Buynow</a>
+                </div>
+
+
 
             </nav>
 
+
+
+        </div>
+        <!--pertenece a la nav-->
+
     </header>
 
-    <div>
+    <div id="buynow">
 
         <main>
 
-            <section>
+            <div class="buynow__imagen">
 
-                <div>
+                <img src="../img/imagen index.png" alt="">
 
-                    <div>
-                        <div><h1></h1></div>
-                        <div><a href=""><h2>click here</h2></a></div>
-                    </div>
+            </div>
 
-                    <div><img src="" alt=""></div>
+            <div class="buynow__info">
+
+                <div class="seccion1">
+
+                    <h1>'Olga Korbut' Vinyl</h1>
+                    <h2>€75.00</h2>
+                    <p>Avaible from: coming soon</p>
+                </div>
+
+                <form class="seccion2" action="">
+                   <div> 
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                        <option selected>Quantity</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                     </div>
+                     <div>
+                      <button type="button" class="btn btn-outline-danger">buy</button>
+                      </div>
+                </form>
+
+                <div class="seccion3">
+                    <ul>
+                        <li>Gatefold wallet</li>
+                        <li>Spot gloss cover image</li>
+                        <li>Printed inner wallet</li>
+                        <li>12-page booklet featuring lyrics and credits</li>
+                        <li>includes instant grat singles on release</li>
+                    </ul>
+                </div>
+
+                <h3>TRACKLIST</h3>
+
+
+                <div class="seccion4">
+
+                    <ol>
+
+                        <li>
+                            Olga Korbut (Intro)</li>
+                        <li>
+                            Soldiers & Business</li>
+                        <li>
+                            Brother Mouzone Skit (Warning Rat Shot)</li>
+                        <li>Palacete</li>
+                        <li>Mr. Ego</li>
+                        <li>
+                            Le Sexe et la Musique (Danubio)</li>
+                        <li>Five Times Betta</li>
+                        <li>two enemigos
+                        </li>
+                        <li>Breakfast at Pyrex</li>
+                        <li>
+                            Hot Spot</li>
+                        <li>Cocaine and Lipton</li>
+                        <li>
+                            Transbordo (Outro)</li>
+
+
+                    </ol>
 
                 </div>
 
-                <div>
 
-                    <div>
-                        <div><img src="" alt=""></img></div>
-                        <div><h3><!--nombre del producto--></h3></div>
-                    </div>
 
-                </div>
 
-            </section>
+
+
+            </div>
 
         </main>
 
+        <footer>
+
+
+
+            <div class="redesylegal">
+
+                <div class="redes">
+
+                    <a class="iconos" href="https://www.instagram.com/ghostpell/?hl=es"><img
+                            src="../img/iconoinstagram.png" alt="redireccion instagram"></a>
+                    <a class="iconos" href="https://www.youtube.com/channel/UCG2YcKT7OUHZKD6RJXwjEmg/featured"><img
+                            src="../img/iconoyoutube.png" alt="redireccion youtube"></a>
+
+                </div>
+
+                <div class="legal">
+
+                    <div>
+                        <p>© Ghostpell</p>
+                    </div>
+
+                    <div><a href="">
+                            <p>privacy policy</p>
+                        </a></div>
+
+
+                </div>
+
+            </div>
+
+
+        </footer>
+
+
+
     </div>
-    
+
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
 </html>

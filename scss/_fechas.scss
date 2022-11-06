@@ -1,67 +1,93 @@
-#fechas{
+#fechas {
 
-    main{
+    @include flex-colum-center;
+    font-family: 'calibri';
 
-        #livedates{
+    main {
+        .main__container {
 
-            @include flex-colum-center;
+            .fechas__titulo {
 
-           
-            .fechas__titulo{
+                @include flex-colum-center;
 
-                font-size: 2em;
-                padding: 2em;
+                h2 {
+                    @include estilo-titulos;
+                    border-bottom: 8px solid black;
+                    padding: 1.5em 0.5em 0.5em 0.5em;
+                    margin-bottom: 1em;
+                }
             }
 
-            .fechas__tabla{
 
-                div{
+            .fechas__tabla {
 
+                padding: $padding-secciones;
+                @include flex-colum-center;
+
+                div {
                     @include flex-row-center;
+                    padding: 1em;
+
+                    div {
+
+                        @include flex-row-center;
+
+                        p {
+                            padding: 0.5em 1.5em 0.7em 1.5em;
+                            font-size: 1.5em;
+                            border-bottom: 2px solid black;
+                        }
+                    }
+
+                    a {
+                        @include radio;
+                        @include hovers;
+                        font-size: 1.3em;
+                        padding: 0.5em 0.7em 0.5em 0.7em;
+                        text-decoration: none;
+                        color: black;
+                    }
                 }
 
-            }
-        }
-
-        #pastdates{
-
-            @include flex-colum-center;
-
-           
-            .fechas__titulo{
-
-                font-size: 2em;
-                padding: 2em;
-            }
-
-            .fechas__tabla{
-
-                div{
-
-                    @include flex-row-center;
-                }
 
             }
         }
     }
 
-    footer{
+    footer {
 
-        .redesylegal{
 
-            @include flex-row-center;
 
-            .redes{
+        @include footer
+    }
 
-                @include flex-row-center;
-            }
+}
 
-            .legal{
+@media (max-width: 900px) {
 
-                @include flex-row-center
-                 
+    #fechas {
+
+        main {
+
+            .main__container {
+                .fechas__tabla {
+
+                    div {
+
+                        @include flex-colum-center;
+
+                        div{
+                            @include flex-colum-center;
+                        }
+
+                    }
+
+
+                }
             }
 
         }
+
     }
+
 }

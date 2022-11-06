@@ -10,3 +10,78 @@
     flex-direction: row;
     align-items: center;
 }
+@mixin radio {
+
+    border: 2px solid black;
+    border-radius: 4px;
+
+}
+
+@mixin estilo-titulos{
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3em;
+
+}
+
+@mixin hovers {
+
+    &:hover{
+        background-color: black;
+        color: $rojo;
+        
+    }
+
+}
+
+@mixin footer {
+
+    width: 100%;
+        .redesylegal {
+
+
+            @include flex-colum-center;
+            z-index: 20;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            left: 0;
+            padding-top: 2em;
+
+            .redes {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 75px;
+                padding-bottom: 0.5em;
+
+                a {
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+
+            }
+
+            .legal {
+
+
+               display: flex;
+               flex-direction: row;
+               align-items: center;
+               justify-content: space-between;
+                width: 200px;
+
+
+            }
+
+        }
+}
+
+@mixin titulos__900px{
+    font-size: 1.5em;
+}

@@ -1,13 +1,16 @@
 #media{
-
+        font-family: 'calibri';
     main{
 
         @include flex-colum-center;
 
-        .media__titulo{
-            font-size: 2em;
-        }
-
+       h1{
+        @include estilo-titulos;
+        border-bottom: 8px solid black;
+        padding: 1.5em 0.5em 0.5em 0.5em;
+        margin-bottom: 1em;
+        
+       }
         .media__articulos{
             display: flex;
             flex-direction: column;
@@ -18,31 +21,43 @@
 
             div{
                 padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                h2{
+                    padding-bottom: 0.2em;
+                    margin-bottom: 0.5em;
+                    font-size: 2em;
+                    border-bottom: 2px solid black;
+                    color: $rojo;
+                }
+                
+                p{
+                    font-size: 1.5em;
+                }
+
+                a{  
+                    
+                    text-decoration: none;
+                    &:hover{
+                        color: $rojo;
+                    }
+                }
+                
             }
         }
 
 
     }
 
-    footer{
-
-        .redesylegal{
-
-            @include flex-row-center;
-
-            .redes{
-
-                @include flex-row-center;
-            }
-
-            .legal{
-
-                @include flex-row-center
-                 
-            }
-
-        }
+    footer {
+        
+       
+        
+        @include footer;
 
     }
 
+   
 }

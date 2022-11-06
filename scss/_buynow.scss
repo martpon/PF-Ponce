@@ -1,0 +1,131 @@
+#buynow {
+    @include flex-colum-center;
+    font-family: 'calibri';
+
+    main {
+        display: flex;
+        flex-direction: row;
+
+        .buynow__imagen {
+
+            margin: 20px;
+            padding-top: 2em;
+
+            img {
+                width: 500px;
+                height: 450px;
+            }
+        }
+
+        .buynow__info {
+            @include flex-colum-center;
+            margin: 20px;
+            padding-left: 25px;
+            height: auto;
+
+            .seccion1 {
+                align-items: flex-start;
+
+                h1 {
+                    font-size: 2em;
+                    color: $rojo;
+                }
+
+                h2 {
+                    padding-left: 15px;
+                    font-size: 2em;
+                }
+
+                p {
+                    font-size: 1.5em;
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+                }
+            }
+
+            form {
+                @include flex-colum-center;
+                margin: 0.5em;
+
+                div {
+                    padding: 10px;
+                }
+            }
+
+            h3 {
+                font-size: 1.5em;
+                padding-top: 0.5em;
+                margin-bottom: 1em;
+                border-bottom: 2px solid black;
+            }
+
+            .seccion4 {
+                ol {
+                    li {
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        @include footer;
+    }
+
+   
+
+}
+
+@media (max-width: 900px) {
+
+    #buynow{
+
+        main{
+            display: flex;
+            flex-direction: column;
+
+            .buynow__imagen{
+                
+                @include flex-colum-center;
+            }
+
+            .buynow__info{
+                padding-left: 25px;
+                p{@include flex-colum-center;}
+               
+            }
+        }
+
+    }
+
+}
+
+@media (max-width: 750px) {
+
+        #buynow{
+
+            main{
+                display: flex;
+                flex-direction: column;
+
+                .buynow__imagen{
+                    
+                    @include flex-colum-center;
+                    img{
+
+                        width: 300px;
+                        height: 250px;
+
+                    }
+                }
+
+                .buynow__info{
+                    p{
+                    @include flex-colum-center;}
+                }
+            }
+
+        }
+
+}
